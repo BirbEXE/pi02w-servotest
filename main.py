@@ -8,7 +8,7 @@ from flask import Flask, request, render_template, redirect, url_for
 # import servo libraries
 from gpiozero import Servo
 
-servo = Servo(14)
+servo = Servo(14,min_pulse_width=0.00055,max_pulse_width=0.00245) # adjust max_pulse_width to 0.00244 if servo is jittering - this is due to low voltage - buy a better power supply
 
 try:
     app = Flask(__name__)
