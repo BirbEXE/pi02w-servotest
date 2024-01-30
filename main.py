@@ -34,7 +34,7 @@ try:
             servo.min()
         elif submit_button == 'Submit':
             print(f"Submit angle: {angle}")
-            servo.value = angle
+            servo.value = float(angle)
         else:
             print("else???")
 
